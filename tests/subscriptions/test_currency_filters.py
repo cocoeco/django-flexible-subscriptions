@@ -1,7 +1,7 @@
 """Tests the currency_filters module."""
 from unittest.mock import patch
 
-from subscriptions.templatetags.currency_filters import currency_filter
+from subscriptions.templatetags.currency_filter import currency_filter
 
 
 @patch.dict('subscriptions.conf.SETTINGS', currency_locale='en_us')
