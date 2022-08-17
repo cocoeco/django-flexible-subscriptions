@@ -62,7 +62,7 @@
           </div>
           <div>
             <span class="table-title">{% trans "Amount" %}</span>
-            {% if transaction.amount %}{{ transaction.amount|currency }}{% else %}{{ 0|currency }}{% endif %}
+            {% if transaction.amount %}{{ transaction.amount|currency_filter }}{% else %}{{ 0|currency_filter }}{% endif %}
           </div>
           <div>
             <a class="button-positive" href="{% url 'dfs_transaction_detail' transaction.id %}">{% trans "View" %}</a>

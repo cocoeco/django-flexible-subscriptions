@@ -62,7 +62,7 @@
             <div>
               <span class="table-title">{% trans "Plan" %}</span>
               {{ subscription.subscription.plan }}<br>
-              {{ subscription.subscription.cost|currency }}
+              {{ subscription.subscription.cost|currency_filter }}
               {{ subscription.subscription.display_billing_frequency_text }}
             </div>
             <div>

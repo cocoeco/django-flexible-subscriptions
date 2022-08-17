@@ -81,7 +81,7 @@
             <ul class="plan-costs">
               {% for cost in plan.costs.all %}
                 <li>
-                  {{ cost.cost|currency }}
+                  {{ cost.cost|currency_filter }}
                   {{ cost.display_billing_frequency_text }}
                 </li>
               {% endfor %}

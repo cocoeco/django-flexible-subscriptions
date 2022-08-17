@@ -31,7 +31,7 @@
 
   <div>
     <strong>{% trans "Amount" %}:</strong>
-    {% if transaction.amount %}{{ transaction.amount|currency }}{% else %}{{ 0|currency }}{% endif %}
+    {% if transaction.amount %}{{ transaction.amount|currency_filter }}{% else %}{{ 0|currency_filter }}{% endif %}
   </div>
 
   <div><br><a href="{% url 'dfs_transaction_list' %}">Back to Transactions</a></div>
