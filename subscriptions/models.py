@@ -69,7 +69,7 @@ class SubscriptionPlan(models.Model):
         blank=True,
         help_text=_('a description of the subscription plan'),
         max_length=512,
-        null=True,
+        null=False,
     )
     group = models.ForeignKey(
         Group,
