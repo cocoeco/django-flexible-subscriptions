@@ -147,7 +147,7 @@ class PlanCost(models.Model):
         decimal_places=2,
         help_text=_('the cost per recurrence of the plan'),
         max_digits=19,
-        null=True,
+        null=False,
     )
 
     class Meta:
