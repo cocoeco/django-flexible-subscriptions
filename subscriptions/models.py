@@ -143,7 +143,6 @@ class PlanCost(models.Model):
         max_length=1,
     )
     cost = models.DecimalField(
-        blank=True,
         decimal_places=2,
         help_text=_('the cost per recurrence of the plan'),
         max_digits=4,
