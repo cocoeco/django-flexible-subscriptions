@@ -65,7 +65,7 @@ class SubscriptionPlan(models.Model):
         null=True,
         unique=True,
     )
-    plan_description = models.CharField(
+    plan_description = models.TextField(
         blank=True,
         help_text=_('a description of the subscription plan'),
         max_length=512,
