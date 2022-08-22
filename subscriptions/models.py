@@ -68,7 +68,6 @@ class SubscriptionPlan(models.Model):
     plan_description = models.TextField(
         blank=True,
         help_text=_('a description of the subscription plan'),
-        max_length=512,
         null=False,
     )
     group = models.ForeignKey(
