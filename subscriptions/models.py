@@ -300,7 +300,10 @@ class UserSubscription(models.Model):
         default=False,
         help_text=_('whether this subscription is cancelled or not'),
     )
-    categories = models.ManyToManyField(Category)
+    categories = models.ManyToManyField(
+        Category,
+        blank=True,
+    )
 
     class Meta:
         ordering = ('user', 'date_billing_start',)
