@@ -111,6 +111,19 @@ class SubscriptionPlan(models.Model):
         return ', '.join(tag.tag for tag in self.tags.all()[:3])
 
 
+class Category(models.Model):
+    name = models.CharField(
+        max_length=128,
+        unique=True,
+        blank=False,
+        null=False,
+    )
+    description = models.TextField(
+        blank=True,
+        null=False,
+    )
+
+
 class PlanCost(models.Model):
     """Cost and frequency of billing for a plan."""
     id = models.UUIDField(
@@ -287,6 +300,7 @@ class UserSubscription(models.Model):
         default=False,
         help_text=_('whether this subscription is cancelled or not'),
     )
+    categories = models.ManyToManyField(Category)
 
     class Meta:
         ordering = ('user', 'date_billing_start',)
