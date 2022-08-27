@@ -122,6 +122,12 @@ class Category(models.Model):
         blank=True,
         null=False,
     )
+    icon = models.ImageField(
+        _('Icon'),
+        upload_to='categories',
+        null=False,
+        blank=False,
+    )
 
 
 class PlanCost(models.Model):
