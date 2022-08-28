@@ -171,6 +171,9 @@ class PlanCost(models.Model):
         null=False,
     )
 
+    def __str__(self):
+        return self.plan.plan_name
+
     class Meta:
         ordering = ('recurrence_unit', 'recurrence_period', 'cost',)
 
