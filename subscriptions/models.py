@@ -129,6 +129,9 @@ class Category(models.Model):
         blank=False,
     )
 
+    def __str__(self):
+        return self.name
+
 
 class PlanCost(models.Model):
     """Cost and frequency of billing for a plan."""
