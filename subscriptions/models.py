@@ -316,6 +316,11 @@ class UserSubscription(models.Model):
         Category,
         blank=True,
     )
+    recurring_payin_registration_id = models.CharField(
+        blank=True,
+        editable=False,
+        max_length=128,
+    )
 
     class Meta:
         ordering = ('user', 'date_billing_start',)
