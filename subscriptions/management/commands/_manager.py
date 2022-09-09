@@ -77,7 +77,7 @@ class Manager():
         cost = subscription.subscription
         plan = cost.plan
 
-        payment_transaction = self.process_payment(user=user, cost=cost)
+        payment_transaction = self.process_payment(user=user, cost=cost, subscription=subscription)
 
         if payment_transaction:
             # Add user to the proper group
@@ -115,7 +115,7 @@ class Manager():
         user = subscription.user
         cost = subscription.subscription
 
-        payment_transaction = self.process_payment(user=user, cost=cost)
+        payment_transaction = self.process_payment(user=user, cost=cost, subscription=subscription)
 
         if payment_transaction:
             # Update subscription details
