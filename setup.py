@@ -34,6 +34,7 @@ setup(
     python_requires='>=3.5',
     install_requires=[
         'django>=2.2',
+        'django-resized==1.0.2',
     ],
     tests_require=[
         'pytest==6.0.1',
