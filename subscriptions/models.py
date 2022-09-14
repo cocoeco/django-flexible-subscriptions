@@ -7,7 +7,7 @@ from django.contrib.auth.models import Group
 from django.core.validators import MinValueValidator
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
+from django_resized import ResizedImageField
 
 # Convenience references for units for plan recurrence billing
 # ----------------------------------------------------------------------------
@@ -122,11 +122,13 @@ class Category(models.Model):
         blank=True,
         null=False,
     )
-    icon = models.ImageField(
+    icon = ResizedImageField(
         _('Icon'),
         upload_to='categories',
         null=False,
         blank=False,
+        size=[50, 50],
+        keep_meta=False,
     )
 
     def __str__(self):
