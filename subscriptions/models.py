@@ -129,6 +129,7 @@ class Category(models.Model):
         blank=False,
         size=[50, 50],
         keep_meta=False,
+        quality=75,
     )
 
     def __str__(self):
