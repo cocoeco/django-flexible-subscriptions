@@ -1,4 +1,5 @@
 """Utility/helper functions for Django Flexible Subscriptions."""
+from django.db import transaction
 from django.db.models import Q
 from django.utils import timezone
 
@@ -39,6 +40,7 @@ class Manager():
         for subscription in due_subscriptions:
             self.process_due(subscription)
 
+    @transaction.atomic
     def process_expired(self, subscription):
         """Handles processing of expired/cancelled subscriptions.
 
@@ -67,6 +69,7 @@ class Manager():
 
         self.notify_expired(subscription)
 
+    @transaction.atomic
     def process_new(self, subscription):
         """Handles processing of a new subscription.
 
@@ -106,6 +109,7 @@ class Manager():
             # Send notifications
             self.notify_new(subscription)
 
+    @transaction.atomic
     def process_due(self, subscription):
         """Handles processing of a due subscription.
 
