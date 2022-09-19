@@ -308,7 +308,7 @@ class UserSubscription(models.Model):
         verbose_name='next start date',
     )
     active = models.BooleanField(
-        default=True,
+        default=False,
         help_text=_('whether this subscription is active or not'),
     )
     cancelled = models.BooleanField(
