@@ -1,14 +1,12 @@
 """PyPI setup script for the django-flexible-subscriptions package."""
 from setuptools import find_packages, setup
 
-from subscriptions import __version__
-
 with open('README.rst', 'r') as readme_file:
     LONG_DESCRIPTION = readme_file.read()
 
 setup(
     name='django-flexible-subscriptions',
-    version=__version__,
+    version='0.15.1',
     url='https://github.com/studybuffalo/django-flexible-subscriptions',
     description=('A subscription and recurrent billing application for Django.'),
     long_description=LONG_DESCRIPTION,
