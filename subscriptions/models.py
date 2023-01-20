@@ -164,7 +164,7 @@ class PlanCost(models.Model):
     )
     recurrence_unit = models.CharField(
         choices=RECURRENCE_UNIT_CHOICES,
-        default=MONTH,
+        default=YEAR,
         max_length=1,
     )
     cost = models.DecimalField(
